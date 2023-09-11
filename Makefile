@@ -31,7 +31,7 @@ clone: downloader-run
 downloader-run:
 	docker run -it --rm \
 		--name hexlet-exercise-kit-repo-downloader \
-		-v $(CURDIR):/home/tirion/project \
+		-v $(CURDIR)/repo-downloader:/home/tirion/project/repo-downloader \
 		-v $(SSH_KEYS_PATH):/home/tirion/.ssh \
 		--env-file ./.env \
 		--env FILTER \

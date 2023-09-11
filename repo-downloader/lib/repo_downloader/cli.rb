@@ -14,7 +14,7 @@ module RepoDownloader
         update: ENV.fetch('UPDATE', 'false') == 'true',
         gitlab_endpoint: ENV.fetch('GITLAB_API_ENDPOINT'),
         gitlab_private_token: ENV.fetch('GITLAB_API_PRIVATE_TOKEN'),
-        repos_path: File.expand_path('..', Dir.getwd)
+        repos_path: File.expand_path('../content', Dir.getwd)
       }
 
       raise 'You should to add Gitlab private token in .env file' if options[:gitlab_private_token].empty?

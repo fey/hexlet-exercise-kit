@@ -15,6 +15,8 @@ WORKDIR /home/tirion/project/repo-downloader
 
 COPY --chown=tirion ["Gemfile*", "*.gemspec", "./"]
 
+RUN mkdir /home/tirion/project/content
+
 RUN bundle
 
 CMD ["make", "run"]
